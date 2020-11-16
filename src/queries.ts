@@ -5,7 +5,7 @@
  *   a?: string;
  *   b?: string;
  * }
- * // parse 
+ * // parse
  * const queryObject = queries.parse<QueryObject>("a=1&b=2");
  * // stringify
  * const queryString = queries.stringify(queryObject);
@@ -21,13 +21,13 @@ export type ParsedQuery = Record<string, any>;
 const REGEXP = {
   SPLIT: /([^?&=]+)=([^&#]*)/g,
   ARRAY_KEY: /\[\]$/,
-}
+};
 
 /**
  * Parse url query to JSON object
- * 
+ *
  * @param query The query string
- * 
+ *
  * @example
  * ```javascript
  * queries.parse("a=1&b=2");
@@ -43,20 +43,20 @@ export const parse = <T = ParsedQuery>(query: string): T => {
     if (REGEXP.ARRAY_KEY.test(k)) {
       const key = k.replace(REGEXP.ARRAY_KEY, '');
       if (!key) return m;
-      result[key] = (result[key] || []).concat(decodeURIComponent(v))
+      result[key] = (result[key] || []).concat(decodeURIComponent(v));
     } else {
       result[k] = decodeURIComponent(v);
     }
     return m;
   });
   return result as T;
-}
+};
 
 /**
  * Stringify JSON object to url query
- * 
+ *
  * @param query JSON object
- * 
+ *
  * @example
  * ```javascript
  * queries.stringify({
@@ -66,16 +66,17 @@ export const parse = <T = ParsedQuery>(query: string): T => {
  * // a=1&b=2
  * ```
  */
-export const stringify = <T = ParsedQuery>(query: T): string => {
-  return Object.keys(query).reduce((acc: string[], cur: string) => {
+// eslint-disable-next-line max-len
+export const stringify = <T = ParsedQuery>(query: T): string => (
+  Object.keys(query).reduce((acc: string[], cur: string) => {
     const v = (query as ParsedQuery)[cur];
     if (Array.isArray(v)) {
-      v.forEach(item => {
+      v.forEach((item) => {
         acc.push(`${cur}[]=${encodeURIComponent(item)}`);
       });
     } else {
       acc.push(`${cur}=${encodeURIComponent(v)}`);
     }
     return acc;
-  }, []).join('&');
-}
+  }, []).join('&')
+);
