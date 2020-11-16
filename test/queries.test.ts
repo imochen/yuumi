@@ -1,4 +1,4 @@
-import queries from '../src/queries';
+import * as queries from '../src/queries';
 
 test("without query", () => {
   const result = queries.parse("https://a.com");
