@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - "14"
+install: npm install
+scripts:
+  - npm run doc
+deploy:
+  provider: pages
+  skip_cleanup: true
+  keep_history: false
+  github-token: $GITHUB_TOKEN
+  local_dir: ./doc
+  on:
+    branch: master

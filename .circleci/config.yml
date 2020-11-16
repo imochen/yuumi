@@ -4,36 +4,17 @@ orbs:
   node: circleci/node@3.0.0
 
 jobs:
-  lint:
+  build:
     executor: node/default
     steps:
       - checkout
       - run: npm install
       - run: npm run lint
-
-  testing:
-    executor: node/default
-    steps:
-      - checkout
-      - run: npm install
       - run: npm run test:coverage
       - run: npm run codecov
-
-  doc:
-    executor: node/default
-    steps:
-      - checkout
-      - run: npm install
-      - run: npm run doc
 
 workflows:
   version: 2
   build:
     jobs:
-      - lint
-      - testing:
-          requires:
-            - lint
-      - doc:
-          requires:
-            - lint
+      - build
