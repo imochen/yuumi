@@ -1,14 +1,19 @@
 version: 2.1
-orbs:
-  node: circleci/node@3.0.0
+
 jobs:
-  lint:
-    executor:
-      name: node/default
-      tag: "14.7"
+  build:
     steps:
       - checkout
       - node/with-cache:
           steps:
             - run: npm install
       - run: npm run lint
+
+workflows:
+  version: 2
+  executor:
+    name: node/default
+    tag: "14.7"
+  build:
+    jobs:
+      - build
