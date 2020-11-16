@@ -2,6 +2,9 @@ version: 2.1
 
 jobs:
   build:
+    executor:
+      name: node/default
+      tag: "14.7"
     steps:
       - checkout
       - node/with-cache:
@@ -11,9 +14,6 @@ jobs:
 
 workflows:
   version: 2
-  executor:
-    name: node/default
-    tag: "14.7"
   build:
     jobs:
       - build
