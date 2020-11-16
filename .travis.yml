@@ -1,9 +1,14 @@
 language: node_js
 node_js:
   - "14"
-install:
-  npm install
-script:
-  npm run test:coverage
-after_success:
-  npm run codecov
+install: npm install
+script: npm run test:coverage
+  npm run doc
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  local_dir: ./doc
+  on:
+    branch: master
+after_success: npm run codecov

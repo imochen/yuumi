@@ -1,10 +1,27 @@
 export type ParsedQuery = Record<string, any>;
 
+/**
+ * @ignore
+ */
 const REGEXP = {
   SPLIT: /([^?&=]+)=([^&#]*)/g,
   ARRAY_KEY: /\[\]$/,
 }
 
+/**
+ * Parse url query to JSON object
+ * 
+ * @param query The query string
+ * 
+ * @example
+ * ```javascript
+ * queries.parse("a=1&b=2");
+ * // {
+ * //   a: '1',
+ * //   b: '2'
+ * // }
+ * ```
+ */
 const parse = (query: string): ParsedQuery => {
   const result: ParsedQuery = {};
   query.replace(REGEXP.SPLIT, (m: string, k: string, v: string) => {
@@ -20,6 +37,20 @@ const parse = (query: string): ParsedQuery => {
   return result;
 }
 
+/**
+ * Stringify JSON object to url query
+ * 
+ * @param query JSON object
+ * 
+ * @example
+ * ```javascript
+ * queries.stringify({
+ *   a: '1',
+ *   b: '2',
+ * });
+ * // a=1&b=2
+ * ```
+ */
 const stringify = (query: ParsedQuery): string => {
   return Object.keys(query).reduce((acc: string[], cur: string) => {
     const v = query[cur];

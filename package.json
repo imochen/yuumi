@@ -2,9 +2,11 @@
   "name": "@mochen/yuumi",
   "version": "0.0.5",
   "description": "Toolkit for js development",
+  "main": "index.js",
   "scripts": {
     "preinstall": "npm prune --production",
-    "compile": "tsc",
+    "precompile": "./bin/precompile",
+    "compile": "npm run precompile && tsc",
     "clean": "rm -rf *.js *.d.ts",
     "test": "jest",
     "lint": "eslint ./src/*.ts",
@@ -12,7 +14,8 @@
     "test:coverage": "jest --coverage",
     "codecov": "codecov -f coverage/*.json",
     "prepublishOnly": "npm run test && npm run compile",
-    "postpublish": "npm run clean"
+    "postpublish": "npm run clean",
+    "doc": "typedoc --out ./doc/ src/*.ts --exclude src/index.ts"
   },
   "repository": {
     "type": "git",
@@ -31,6 +34,7 @@
     "codecov": "^3.8.1",
     "jest": "^26.6.3",
     "ts-jest": "^26.4.4",
+    "typedoc": "^0.19.2",
     "typescript": "^4.0.5"
   }
 }
