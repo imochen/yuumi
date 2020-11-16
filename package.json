@@ -1,6 +1,6 @@
 {
   "name": "@mochen/yuumi",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Toolkit for js development",
   "scripts": {
     "preinstall": "npm prune --production",
