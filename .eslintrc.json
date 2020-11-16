@@ -1,0 +1,21 @@
+{
+  "extends": ["airbnb-base"],
+  "plugins": ["@typescript-eslint"],
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "eol-last": "off",
+    "no-plusplus": "off"
+  },
+  "globals": {
+    "window": true,
+    "describe": true,
+    "it": true
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  }
+}

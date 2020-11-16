@@ -1,0 +1,27 @@
+{
+  "name": "@mochen/yuumi",
+  "version": "0.1.0",
+  "description": "Toolkit for js development",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:cov": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imochen/yuumi.git"
+  },
+  "keywords": [],
+  "author": "mochen <mochen.china@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/imochen/yuumi/issues"
+  },
+  "homepage": "https://github.com/imochen/yuumi#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.15",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.4.4",
+    "typescript": "^4.0.5"
+  }
+}
