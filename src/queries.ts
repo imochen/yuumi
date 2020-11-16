@@ -1,10 +1,14 @@
 /**
  * ```typescript
  * import { queries } from '@mochen/yuumi';
- * // parse
- * const queryObject = queries.parse('a=1&b=2');
+ * interface QueryObject {
+ *   a?: string;
+ *   b?: string;
+ * }
+ * // parse 
+ * const queryObject = queries.parse<QueryObject>("a=1&b=2");
  * // stringify
- * const queryString = queries.stringify({a: '1', b: '2'});
+ * const queryString = queries.stringify(queryObject);
  * ```
  * @packageDocumentation
  */
@@ -33,7 +37,7 @@ const REGEXP = {
  * // }
  * ```
  */
-export const parse = (query: string): ParsedQuery => {
+export const parse = <T = ParsedQuery>(query: string): T => {
   const result: ParsedQuery = {};
   query.replace(REGEXP.SPLIT, (m: string, k: string, v: string) => {
     if (REGEXP.ARRAY_KEY.test(k)) {
@@ -45,7 +49,7 @@ export const parse = (query: string): ParsedQuery => {
     }
     return m;
   });
-  return result;
+  return result as T;
 }
 
 /**
@@ -62,9 +66,9 @@ export const parse = (query: string): ParsedQuery => {
  * // a=1&b=2
  * ```
  */
-export const stringify = (query: ParsedQuery): string => {
+export const stringify = <T = ParsedQuery>(query: T): string => {
   return Object.keys(query).reduce((acc: string[], cur: string) => {
-    const v = query[cur];
+    const v = (query as ParsedQuery)[cur];
     if (Array.isArray(v)) {
       v.forEach(item => {
         acc.push(`${cur}[]=${encodeURIComponent(item)}`);
