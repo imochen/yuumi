@@ -1,3 +1,14 @@
+/**
+ * ```typescript
+ * import { queries } from '@mochen/yuumi';
+ * // parse
+ * const queryObject = queries.parse('a=1&b=2');
+ * // stringify
+ * const queryString = queries.stringify({a: '1', b: '2'});
+ * ```
+ * @packageDocumentation
+ */
+
 export type ParsedQuery = Record<string, any>;
 
 /**
@@ -22,7 +33,7 @@ const REGEXP = {
  * // }
  * ```
  */
-const parse = (query: string): ParsedQuery => {
+export const parse = (query: string): ParsedQuery => {
   const result: ParsedQuery = {};
   query.replace(REGEXP.SPLIT, (m: string, k: string, v: string) => {
     if (REGEXP.ARRAY_KEY.test(k)) {
@@ -51,7 +62,7 @@ const parse = (query: string): ParsedQuery => {
  * // a=1&b=2
  * ```
  */
-const stringify = (query: ParsedQuery): string => {
+export const stringify = (query: ParsedQuery): string => {
   return Object.keys(query).reduce((acc: string[], cur: string) => {
     const v = query[cur];
     if (Array.isArray(v)) {
@@ -63,9 +74,4 @@ const stringify = (query: ParsedQuery): string => {
     }
     return acc;
   }, []).join('&');
-}
-
-export default {
-  parse,
-  stringify,
 }
