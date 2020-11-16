@@ -1,5 +1,5 @@
 {
-  "coverageReporters": ["text", "html", "json"],
+  "coverageReporters": ["json"],
   "transform": {
     "^.+\\.tsx?$": "ts-jest"
   },

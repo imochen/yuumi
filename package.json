@@ -4,9 +4,11 @@
   "description": "Toolkit for js development",
   "main": "index.js",
   "scripts": {
+    "preinstall": "npm prune --production",
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "codecov": "codecov -f coverage/*.json"
+    "codecov": "codecov -f coverage/*.json",
+    "publish": "clean-publish"
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,7 @@
   "homepage": "https://github.com/imochen/yuumi#readme",
   "devDependencies": {
     "@types/jest": "^26.0.15",
+    "clean-publish": "^1.1.8",
     "codecov": "^3.8.1",
     "jest": "^26.6.3",
     "ts-jest": "^26.4.4",
