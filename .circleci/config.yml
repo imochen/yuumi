@@ -32,4 +32,8 @@ workflows:
     jobs:
       - lint
       - testing
+        requires:
+          - lint
       - doc
+        requires:
+          - lint
