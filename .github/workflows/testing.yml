@@ -1,9 +1,9 @@
-name: Testing
+name: testing
 
 on: [push, pull_request]
 
 jobs:
-  build:
+  testing:
     runs-on: ubuntu-latest
 
     strategy:
@@ -19,5 +19,6 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Run Testing
-        run: npm run lint
-        run: npm test
+        run:  |
+          npm run lint
+          npm run test
