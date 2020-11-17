@@ -10,10 +10,10 @@
   </h1>
   <sup>
     <br />
-    <a href="https://www.npmjs.com/package/@mochen/yuumi" target="_blank">
+    <a href="https://www.npmjs.com/package/@mochen/yuumi">
       <img src="https://img.shields.io/npm/v/@mochen/yuumi.svg" alt="npm package" />
     </a>
-    <a href="https://codecov.io/gh/imochen/yuumi" target="_blank">
+    <a href="https://codecov.io/gh/imochen/yuumi">
       <img src="https://codecov.io/gh/imochen/yuumi/branch/master/graph/badge.svg" alt="CircleCI master" />
     </a>
     <a href="https://imochen.github.io/yuumi/">
