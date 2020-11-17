@@ -1,6 +1,6 @@
 {
   "name": "@mochen/yuumi",
-  "version": "0.0.8",
+  "version": "1.0.0",
   "description": "Toolkit for js development",
   "main": "index.js",
   "scripts": {
