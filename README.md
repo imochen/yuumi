@@ -26,7 +26,7 @@
   <br />
 </div>
 
-- [**Parser**]
+- **Parser**
   - [`queries`](https://imochen.github.io/yuumi/modules/_queries_.html) &mdash; Parse url query to object, stringify object to url query.
 
 ## Usage
