@@ -26,7 +26,7 @@ const REGEXP = {
 /**
  * Parse url query to JSON object
  *
- * @param query The query string
+ * @param query
  *
  * @example
  * ```javascript

@@ -1,7 +1,7 @@
 import * as queries from '../src/queries';
 
-test("without query", () => {
-  const result = queries.parse("https://a.com");
+test('without query', () => {
+  const result = queries.parse('https://a.com');
   expect(result).toEqual({});
 });
 
@@ -32,17 +32,17 @@ test('mutilp value', () => {
 
 test('error array value', () => {
   const result = queries.parse('https://a.com?a=1&[]=2&b[]=3&b[]=4');
-  expect(result).toEqual({ a: '1', b: ["3", "4"] });
+  expect(result).toEqual({ a: '1', b: ['3', '4'] });
 });
 
 test('array value', () => {
   const result = queries.parse('https://a.com?a=1&b[]=2&b[]=3&b[]=4');
-  expect(result).toEqual({ a: '1', b: ["2", "3", "4"] });
+  expect(result).toEqual({ a: '1', b: ['2', '3', '4'] });
 });
 
 test('array value empty', () => {
   const result = queries.parse('https://a.com?a=1&b[]=');
-  expect(result).toEqual({ a: '1', b: [""] });
+  expect(result).toEqual({ a: '1', b: [''] });
 });
 
 test('stringify', () => {
@@ -51,11 +51,11 @@ test('stringify', () => {
 });
 
 test('stringify array', () => {
-  const result = queries.stringify({ a: '1', b: ["2", "3", "4"] });
+  const result = queries.stringify({ a: '1', b: ['2', '3', '4'] });
   expect(result).toEqual('a=1&b[]=2&b[]=3&b[]=4');
 });
 
 test('stringify array empty', () => {
-  const result = queries.stringify({ a: '1', b: [""] });
+  const result = queries.stringify({ a: '1', b: [''] });
   expect(result).toEqual('a=1&b[]=');
 });
