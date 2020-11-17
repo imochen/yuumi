@@ -26,8 +26,8 @@
   <br />
 </div>
 
-- [**传感器**]
-  - [`queries`](https://imochen.github.io/yuumi/modules/_queries_.html) &mdash; Parse url query to object, stringify object to string.
+- [**Parser**]
+  - [`queries`](https://imochen.github.io/yuumi/modules/_queries_.html) &mdash; Parse url query to object, stringify object to url query.
 
 ## Usage
 
