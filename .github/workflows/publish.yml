@@ -3,9 +3,9 @@ name: publish
 on:
   push:
     tags:
-      - v*
+      - v*.*.*
 jobs:
-  deploy:
+  publish:
     runs-on: ubuntu-latest
 
     strategy:
