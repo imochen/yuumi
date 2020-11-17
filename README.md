@@ -1,21 +1,44 @@
-# Yuumi
-[![npm](https://img.shields.io/npm/v/@mochen/yuumi)](https://www.npmjs.com/package/@mochen/yuumi)  [![codecov](https://codecov.io/gh/imochen/yuumi/branch/master/graph/badge.svg)](https://codecov.io/gh/imochen/yuumi) [![document](https://img.shields.io/badge/document-published-brightgreen)](https://imochen.github.io/yuumi/)
+<div align="center">
+  <h1>
+    <br/>
+    🧰
+    <br />
+    @mochen/yuumi
+    <br />
+    <br />
+  </h1>
+  <sup>
+    <br />
+    <a href="https://www.npmjs.com/package/@mochen/yuumi" target="_blank">
+      <img src="https://img.shields.io/npm/v/@mochen/yuumi.svg" alt="npm package" />
+    </a>
+    <a href="https://codecov.io/gh/imochen/yuumi" target="_blank">
+      <img src="https://codecov.io/gh/imochen/yuumi/branch/master/graph/badge.svg" alt="CircleCI master" />
+    </a>
+    <a href="https://imochen.github.io/yuumi/">
+      <img src="https://img.shields.io/badge/document-published-brightgreen" alt="npm downloads" />
+    </a>
+    <br />
+  </sup>
+  <br />
+  <pre>npm i <a href="https://www.npmjs.com/package/@mochen/yuumi">@mochen/yuumi</a></pre>
+  <br />
+  <br />
+</div>
 
-`Yuumi` is an `ES6` module which support Typescript. Include some usefull `lite function` that without any other module dependencies.
-
-## Installation
-
-```bash
-$ npm install @mochen/yuumi --save
-```
+- [**传感器**]
+  - [`queries`](https://imochen.github.io/yuumi/modules/_queries_.html) &mdash; Parse url query to object, stringify object to string.
 
 ## Usage
-```typescript
-import { queries } from '@mochen/yuumi';
 
-const { a, b } = queries.parse("a=1&b=2");
+`Yuumi` is an `ES6` module with better supported for `Typescript`, Include some usefull `Lite Function` without any other module dependencies.
+
+```js
+import queries from '@mochen/yuumi/queries';
 ```
 
-## [Document](https://imochen.github.io/yuumi/)
+OR
 
-- [queries](https://imochen.github.io/yuumi/modules/_queries_.html)
+```js
+import { queries } from '@mochen/yuumi';
+```
