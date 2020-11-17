@@ -5,7 +5,7 @@ on:
     branches:
       - master
 jobs:
-  testing:
+  deploy:
     runs-on: ubuntu-latest
 
     strategy:
