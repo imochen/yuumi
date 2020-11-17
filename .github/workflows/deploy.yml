@@ -1,4 +1,4 @@
-name: document
+name: deploy
 
 on:
   push:
@@ -36,7 +36,8 @@ jobs:
       - name: Run build document
         run: npm run doc
       - name: Deploy document
-        uses: chabad360/hugo-gh-pages@master
-        with:
-          githubToken: ${{ secrets.CI_GH_PAGE_TOKEN }}
-          siteDir: /github/workspace/doc
+        uses: Cecilapp/GitHub-Pages-deploy@master
+        env:
+          EMAIL: mochen.china@gmail.com
+          GH_TOKEN: ${{ secrets.CI_GH_PAGE_TOKEN }}
+          BUILD_DIR: doc
