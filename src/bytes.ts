@@ -7,7 +7,7 @@
  */
 
 /**
- * Transform bytes to readable string
+ * Transform bytes to readable string.
  * 
  * @param bytes
  * @param decimals 

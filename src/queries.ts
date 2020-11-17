@@ -24,7 +24,7 @@ const REGEXP = {
 };
 
 /**
- * Parse url query to JSON object
+ * Parse url query to JSON object.
  *
  * @param query
  *
@@ -53,7 +53,7 @@ export const parse = <T = ParsedQuery>(query: string): T => {
 };
 
 /**
- * Stringify JSON object to url query
+ * Stringify JSON object to url query.
  *
  * @param query JSON object
  *

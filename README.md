@@ -29,6 +29,7 @@
 
 - **Parser**
   - [`queries`](https://imochen.github.io/yuumi/modules/_queries_.html) &mdash; Parse url query to object, stringify object to url query.
+  - [`filenames`](https://imochen.github.io/yuumi/modules/_filenames_.html) &mdash; Split filename to name and extions.
 - **Formatter**
   - [`bytes`](https://imochen.github.io/yuumi/modules/_bytes_.html) &mdash; Transform bytes to readable string.
   
