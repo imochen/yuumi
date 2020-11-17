@@ -30,7 +30,8 @@
   - [`queries`](https://imochen.github.io/yuumi/modules/_queries_.html) &mdash; Parse url query to object, stringify object to url query.
 - **Formatter**
   - [`bytes`](https://imochen.github.io/yuumi/modules/_bytes_.html) &mdash; Transform bytes to readable string.
-  - 
+  
+
 ## Usage
 
 `Yuumi` is an `ES6` module with better supported for `Typescript`, Include some usefull `Lite Function` without any other module dependencies.
