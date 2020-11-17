@@ -1,0 +1,42 @@
+name: document
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  testing:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install dependencies
+        run: npm install
+      - name: Run lint
+        run: npm run lint
+      - name: Run test coverage
+        run: npm run test:coverage
+      - name: Deploy codecov
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          file: ./coverage/coverage-final.json
+          flags: unittests # optional
+          name: codecov-umbrella # optional
+          fail_ci_if_error: true # optional (default = false)
+          verbose: true
+      - name: Run build document
+        run: npm run doc
+      - name: Deploy document
+        uses: chabad360/hugo-gh-pages@master
+        with:
+          githubToken: ${{ secrets.CI_GH_PAGE_TOKEN }}
+          siteDir: /github/workspace/doc

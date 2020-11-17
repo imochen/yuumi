@@ -4,8 +4,6 @@ on:
   push:
     branches-ignore:
       - master
-    tags-ignore:
-      - v*
 jobs:
   testing:
     runs-on: ubuntu-latest
