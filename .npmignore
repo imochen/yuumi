@@ -8,3 +8,6 @@ test
 .travis.yml
 jest.config.json
 tsconfig.json
+.github
+bin
+typedoc.json

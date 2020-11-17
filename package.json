@@ -4,7 +4,6 @@
   "description": "Toolkit for js development",
   "main": "index.js",
   "scripts": {
-    "preinstall": "npm prune --production",
     "precompile": "./bin/precompile",
     "compile": "npm run precompile && tsc",
     "clean": "rm -rf *.js *.d.ts",
@@ -14,6 +13,7 @@
     "test:coverage": "jest --coverage",
     "codecov": "codecov -f coverage/*.json",
     "prepublishOnly": "npm run test && npm run compile",
+    "publish": "clean-publish",
     "postpublish": "npm run clean",
     "doc": "typedoc && ./bin/postdoc"
   },
@@ -33,6 +33,7 @@
     "@types/jest": "^26.0.15",
     "@typescript-eslint/eslint-plugin": "^4.7.0",
     "@typescript-eslint/parser": "^4.7.0",
+    "clean-publish": "^1.1.8",
     "codecov": "^3.8.1",
     "eslint": "^7.13.0",
     "eslint-config-airbnb-base": "^14.2.1",
