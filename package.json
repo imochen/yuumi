@@ -15,7 +15,7 @@
     "codecov": "codecov -f coverage/*.json",
     "prepublishOnly": "npm run test && npm run compile",
     "postpublish": "npm run clean",
-    "doc": "typedoc --out ./doc/ src/*.ts --exclude src/index.ts"
+    "doc": "typedoc && ./bin/postdoc"
   },
   "repository": {
     "type": "git",
@@ -40,7 +40,6 @@
     "jest": "^26.6.3",
     "ts-jest": "^26.4.4",
     "typedoc": "^0.19.2",
-    "typedoc-plugin-nojekyll": "^1.0.1",
     "typescript": "^4.0.5"
   }
 }
