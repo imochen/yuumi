@@ -1,6 +1,6 @@
 {
   "name": "@mochen/yuumi",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Toolkit for js development",
   "main": "index.js",
   "scripts": {
@@ -13,9 +13,9 @@
     "test:coverage": "jest --coverage",
     "codecov": "codecov -f coverage/*.json",
     "prepublishOnly": "npm run test && npm run compile",
-    "publish": "clean-publish",
     "postpublish": "npm run clean",
-    "doc": "typedoc && ./bin/postdoc"
+    "postdoc": "./bin/postdoc",
+    "doc": "typedoc && npm run postdoc"
   },
   "repository": {
     "type": "git",
@@ -33,7 +33,6 @@
     "@types/jest": "^26.0.15",
     "@typescript-eslint/eslint-plugin": "^4.7.0",
     "@typescript-eslint/parser": "^4.7.0",
-    "clean-publish": "^1.1.8",
     "codecov": "^3.8.1",
     "eslint": "^7.13.0",
     "eslint-config-airbnb-base": "^14.2.1",
