@@ -2,9 +2,19 @@ language: node_js
 node_js:
   - "14"
 install: npm install
-scripts:
-  - npm run doc
-deploy:
+script:
+  - npm run lint
+codecov:
+  provider: script
+  script:
+    - npm run test:coverage
+    - npm run codecov
+build_doc:
+  provider: script
+  script: npm run doc
+  on:
+    branch: master
+deploy_doc:
   provider: pages
   skip_cleanup: true
   keep_history: false

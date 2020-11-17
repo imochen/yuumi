@@ -5,14 +5,14 @@ const path = require('path');
 
 const getAllFiles = (dir) => {
   const files = [];
-  fs.readdirSync(dir).forEach(item => {
+  fs.readdirSync(dir).forEach((item) => {
     const fileOrPath = path.resolve(dir, item);
     if (fs.statSync(fileOrPath).isFile()) {
       files.push(fileOrPath);
     }
   });
   return files;
-}
+};
 
 (() => {
   const baseDir = path.resolve(__dirname, '../src');
@@ -20,11 +20,10 @@ const getAllFiles = (dir) => {
   if (fs.existsSync(indexPath)) {
     fs.unlinkSync(indexPath);
   }
-  const content = getAllFiles(baseDir).map(item => {
+  const content = getAllFiles(baseDir).map((item) => {
     const relativePath = item.replace(baseDir, '.').replace(/\.ts$/, '');
     const fileName = relativePath.replace(/^\.\//, '');
-    return `export * as ${fileName} from '${relativePath}';`
+    return `export * as ${fileName} from '${relativePath}';`;
   }).join('\n');
-  console.log(content);
   fs.writeFileSync(indexPath, content, { encoding: 'utf-8' });
 })();
