@@ -51,7 +51,7 @@ export const parse = <T = Record<string, any>>(query: string): T => {
  * @param query JSON object
  *
  * @example
- * ```javascript
+ * ```typescript
  * queries.stringify({
  *   a: '1',
  *   b: '2',

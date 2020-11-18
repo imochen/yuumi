@@ -31,6 +31,7 @@
   - [`queries`](https://imochen.github.io/yuumi/modules/_queries_.html) &mdash; Parse url query to JSON object or stringify JSON object to url query.
   - [`filenames`](https://imochen.github.io/yuumi/modules/_filenames_.html) &mdash; Split filename to name and extions.
   - [`bytes`](https://imochen.github.io/yuumi/modules/_bytes_.html) &mdash; Transform bytes number to readable string.
+  - [`dates`](https://imochen.github.io/yuumi/modules/_dates_.html) &mdash; Convert date or date string to specified format.
 - **Side-Effects**
   - [`cookies`](https://imochen.github.io/yuumi/modules/_cookies_.html) &mdash; Operation cookies in broswer.
 - **Functional**

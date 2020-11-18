@@ -2,7 +2,7 @@
  * ## Bytes
  * Transform bytes number to readable string.
  * 
- * ```javascript
+ * ```typescript
  * import { bytes } from '@mochen/yuumi';
  * ```
  * @packageDocumentation

@@ -15,7 +15,7 @@
  * @param context 
  * 
  * @example
- * ```
+ * ```typescript
  * const runOnce = once(()=>{
  *  console.log('1');
  * });
