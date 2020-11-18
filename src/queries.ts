@@ -1,19 +1,12 @@
 /**
- * ```typescript
+ * ## Queries
+ * Parse url query to JSON object or stringify JSON object to url query.
+ * 
+ * ```javascript
  * import { queries } from '@mochen/yuumi';
- * interface QueryObject {
- *   a?: string;
- *   b?: string;
- * }
- * // parse
- * const queryObject = queries.parse<QueryObject>("a=1&b=2");
- * // stringify
- * const queryString = queries.stringify(queryObject);
  * ```
  * @packageDocumentation
  */
-
-export type ParsedQuery = Record<string, any>;
 
 /**
  * @ignore
@@ -29,16 +22,16 @@ const REGEXP = {
  * @param query
  *
  * @example
- * ```javascript
- * queries.parse("a=1&b=2");
- * // {
- * //   a: '1',
- * //   b: '2'
- * // }
+ * ```typescript
+ * interface Query {
+ *  u?: string;
+ *  x?: string;
+ * }
+ * const parsedQuery = queries.parse<Query>("u=123");
  * ```
  */
-export const parse = <T = ParsedQuery>(query: string): T => {
-  const result: ParsedQuery = {};
+export const parse = <T = Record<string, any>>(query: string): T => {
+  const result: Record<string, any> = {};
   query.replace(REGEXP.SPLIT, (m: string, k: string, v: string) => {
     if (REGEXP.ARRAY_KEY.test(k)) {
       const key = k.replace(REGEXP.ARRAY_KEY, '');
@@ -66,10 +59,9 @@ export const parse = <T = ParsedQuery>(query: string): T => {
  * // a=1&b=2
  * ```
  */
-// eslint-disable-next-line max-len
-export const stringify = <T = ParsedQuery>(query: T): string => (
+export const stringify = (query: Record<string, any>): string => (
   Object.keys(query).reduce((acc: string[], cur: string) => {
-    const v = (query as ParsedQuery)[cur];
+    const v = query[cur];
     if (Array.isArray(v)) {
       v.forEach((item) => {
         acc.push(`${cur}[]=${encodeURIComponent(item)}`);

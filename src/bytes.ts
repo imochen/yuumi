@@ -1,7 +1,9 @@
 /**
- * ```typescript
+ * ## Bytes
+ * Transform bytes number to readable string.
+ * 
+ * ```javascript
  * import { bytes } from '@mochen/yuumi';
- * bytes.format(1020) // 1.02 KB
  * ```
  * @packageDocumentation
  */

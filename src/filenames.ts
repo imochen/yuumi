@@ -1,7 +1,9 @@
 /**
+ * ## Filenames
+ * Split filename to name and extions.
+ * 
  * ```typescript
  * import { filenames } from '@mochen/yuumi';
- * filenames.parse('a.ZIP'); // ['a', 'ZIP']
  * ```
  * @packageDocumentation
  */

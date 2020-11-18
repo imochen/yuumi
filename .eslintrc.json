@@ -8,7 +8,9 @@
     "import/prefer-default-export": "off",
     "no-trailing-spaces": "off",
     "import/extensions": "off",
-    "no-undef": "off"
+    "no-undef": "off",
+    "comma-dangle": "off",
+    "max-len": "off"
   },
   "globals": {
     "window": true,
