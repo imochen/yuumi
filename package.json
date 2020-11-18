@@ -6,7 +6,7 @@
   "scripts": {
     "precompile": "./bin/precompile",
     "compile": "npm run precompile && tsc",
-    "clean": "rm -rf *.js *.d.ts",
+    "clean": "rm -rf *.js *.d.ts src/index.ts",
     "test": "jest",
     "lint": "eslint ./src/*.ts ./test/*.ts",
     "lint:fix": "eslint ./src/*.ts ./test/*.ts --fix",

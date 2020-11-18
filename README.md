@@ -27,10 +27,11 @@
   <br />
 </div>
 
-- **Parser**
+- **Parser/Formatter**
   - [`queries`](https://imochen.github.io/yuumi/modules/_queries_.html) &mdash; Parse url query to JSON object or stringify JSON object to url query.
   - [`filenames`](https://imochen.github.io/yuumi/modules/_filenames_.html) &mdash; Split filename to name and extions.
-- **Formatter**
   - [`bytes`](https://imochen.github.io/yuumi/modules/_bytes_.html) &mdash; Transform bytes number to readable string.
-- **Broswer**
+- **Side-Effects**
   - [`cookies`](https://imochen.github.io/yuumi/modules/_cookies_.html) &mdash; Operation cookies in broswer.
+- **Functional**
+  - [`once`](https://imochen.github.io/yuumi/modules/_once_.html) &mdash; Return a function only can run noce
