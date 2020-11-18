@@ -15,7 +15,8 @@
     "prepublishOnly": "npm run test && npm run compile",
     "postpublish": "npm run clean",
     "postdoc": "./bin/postdoc",
-    "doc": "typedoc && npm run postdoc"
+    "doc": "typedoc && npm run postdoc",
+    "check": "npm run lint && npm run test && npm run doc && npm run compile && npm run clean"
   },
   "repository": {
     "type": "git",
