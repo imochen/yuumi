@@ -35,4 +35,5 @@
 - **Side-Effects**
   - [`cookies`](https://imochen.github.io/yuumi/modules/_cookies_.html) &mdash; Operation cookies in broswer.
 - **Functional**
-  - [`once`](https://imochen.github.io/yuumi/modules/_once_.html) &mdash; Return a function only can run noce
+  - [`once`](https://imochen.github.io/yuumi/modules/_once_.html) &mdash; Return a function only can run noce.
+  - [`poll`](https://imochen.github.io/yuumi/modules/_poll_.html) &mdash; Repeat run function until return true.

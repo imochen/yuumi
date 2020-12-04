@@ -10,7 +10,9 @@
     "import/extensions": "off",
     "no-undef": "off",
     "comma-dangle": "off",
-    "max-len": "off"
+    "max-len": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "error"
   },
   "globals": {
     "window": true,
