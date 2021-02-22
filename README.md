@@ -37,3 +37,7 @@
 - **Functional**
   - [`once`](https://imochen.github.io/yuumi/modules/_once_.html) &mdash; Return a function only can run noce.
   - [`poll`](https://imochen.github.io/yuumi/modules/_poll_.html) &mdash; Repeat run function until return true.
+  - [`download`](https://imochen.github.io/yuumi/modules/_download_.html) &mdash; Download resources with mutiple ways.
+  - [`excludeFields`](https://imochen.github.io/yuumi/modules/_excludeFields_.html) &mdash; Exclude specified fields in objects.
+  - [`number`](https://imochen.github.io/yuumi/modules/_number_.html) &mdash;
+    Some utility functions for generating and judging numbers.
