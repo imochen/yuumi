@@ -50,10 +50,10 @@ export function isInRange(num:number, min: number, max: number):boolean {
   return num >= min && num < max;
 }
 /**
- * 生成一个随机的数字
+ * Generate a random number
  * @param {Number} min Minimum
  * @param {Number} max Max（not contain）
- * @returns {Number} 生成的随机整数
+ * @returns {Number} Random integer in range
  * 
  * @example
  * ```typescript
