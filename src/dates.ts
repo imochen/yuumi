@@ -54,7 +54,7 @@ interface DateBetweenResult{
   hour: number 
   day: number 
   year: number 
-  mouth: number 
+  month: number 
 }
 /**
  * Calculate time difference.
@@ -70,7 +70,7 @@ interface DateBetweenResult{
  *   hour: 8776
  *   milliSecond: 31593600000
  *   minute: 526560
- *   mouth: 12 // The difference obtained here is calculated on a monthly basis, that is, 2018-12-31 => 2019-01-01 is also considered a difference of one month
+ *   month: 12 // The difference obtained here is calculated on a monthly basis, that is, 2018-12-31 => 2019-01-01 is also considered a difference of one month
  *   second: 31593600
  *   year: 1 // The difference obtained here is calculated on an annual basis, that is, 2018-12-31 => 2019-01-01 is also considered a difference of one year
  * }
@@ -84,7 +84,7 @@ export const between = (start:Date, end:Date):DateBetweenResult => {
   const hour = Math.floor(minute / 60);
   const day = Math.floor(hour / 24);
   const year = end.getFullYear() - start.getFullYear();
-  const mouth = year * 12 + end.getMonth() - start.getMonth();
+  const month = year * 12 + end.getMonth() - start.getMonth();
 
   return {
     milliSecond,
@@ -93,6 +93,6 @@ export const between = (start:Date, end:Date):DateBetweenResult => {
     hour,
     day,
     year,
-    mouth,
+    month,
   };
 };
