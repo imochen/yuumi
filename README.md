@@ -41,3 +41,13 @@
   - [`excludeFields`](https://imochen.github.io/yuumi/modules/_excludeFields_.html) &mdash; Exclude specified fields in objects.
   - [`number`](https://imochen.github.io/yuumi/modules/_number_.html) &mdash;
     Some utility functions for generating and judging numbers.
+  - [`deepClone`](https://imochen.github.io/yuumi/modules/_deepClone_.html) &mdash;
+    DeepClone.
+  - [`debounce`](https://imochen.github.io/yuumi/modules/_debounce_.html) &mdash;
+    Execute after the event is triggered for a specified time
+  - [`sleep`](https://imochen.github.io/yuumi/modules/_sleep_.html) &mdash;
+    Sleep the process for a while
+  - [`throttle`](https://imochen.github.io/yuumi/modules/_throttle_.html) &mdash;
+    Make the function can only be executed once within a specified time.
+  - [`type`](https://imochen.github.io/yuumi/modules/_type_.html) &mdash;
+    Judgement parameter type.

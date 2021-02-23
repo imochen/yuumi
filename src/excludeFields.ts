@@ -14,7 +14,7 @@
  * 
  * ```
  */
-export default function excludeFields(object:object, fields:string[]):object {
+export default function excludeFields <T extends Object>(object:T, fields:string[]):T {
   const set = new Set(fields);
   const tempObj:any = {};
   
